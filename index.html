@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>BUDDY HUB</h1>
+        <nav>
+            <ul>
+                <li><a href="#chat">Chat</a></li>
+                <li><a href="#media">Share Media</a></li>
+                <li><button class="nav-button" onclick="login()">Login</button></li>
+                <li><button class="nav-button" onclick="showAuthSection()">Sign Up</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Authentication Section -->
+    <div id="authSection">
+        <h2>Sign Up / Login</h2>
+        <input type="text" id="username" placeholder="Enter your username">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button onclick="login()">Login</button>
+        <button onclick="signUp()">Sign Up</button>
+    </div>
+
+    <!-- App Section (Initially Hidden) -->
+    <div id="appSection" style="display: none;">
+        <header>
+            <h1>Interactive Social App</h1>
+            <nav>
+                <ul>
+                    <li><a href="#chat">Chat</a></li>
+                    <li><a href="#media">Share Media</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Media Upload Section -->
+        <!-- <div id="media" class="section">
+            <h2>Share Photos & Videos</h2>
+            <input type="file" id="mediaUpload" accept="image/*,video/*">
+            <button onclick="uploadMedia()">Upload</button>
+            <div id="mediaPreview"></div>
+        </div> -->
+
+        <!-- Private Message Section -->
+        <div id="privateMessageSection" class="section">
+            <h2>Send a Private Message</h2>
+            <input type="text" id="recipientUsername" placeholder="Recipient's Username">
+            <textarea id="privateMessage" placeholder="Type your message..."></textarea>
+            <button onclick="sendPrivateMessage()">Send Message</button>
+            <h3>Private Messages</h3>
+            <div id="privateMessagesArea"></div>
+        </div>
+
+        <footer>
+            <button onclick="logout()">Logout</button>
+            <p>&copy; Buddy Hub</p>
+        </footer>
+    </div>
+
+</body>
+</html>
